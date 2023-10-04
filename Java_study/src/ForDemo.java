@@ -14,6 +14,10 @@ public class ForDemo {
             if(i == 13) {
                 break;
             }
+
+            for(int j = 0; j < 5; j++) {
+                System.out.println("I: " + i + "J: " + j);
+            }
         }
     }
 }
