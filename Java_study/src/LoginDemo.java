@@ -26,5 +26,7 @@ public class LoginDemo {
                 System.out.println('3');
                 break;
         }
+
+        // 논리 연산자는 javascript랑 동일하여 커밋하지 않음.
     }
 }
