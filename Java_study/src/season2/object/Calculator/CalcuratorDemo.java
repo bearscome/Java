@@ -49,7 +49,13 @@ public class CalcuratorDemo {
         Calcurator.base = 10;
         // 클래스 맴버의 값을 변경하여 해당 인스턴스의 값이 변경되기 때문에
         // constans가 아닌 클래스 내부에 선언하여 모든 클래스를 동일하게 변경을 할 수 있다.
+
+//        c1.base = 10으로 변경 시 c2도 같이 변경되는 이유는 base는 클래스 맴버 변수이고 해당 변수는
+//        모든 인스턴스에 공유되기 때문이다.
         c1.sum();
         c2.sum();
+
+        System.out.println(System.identityHashCode(c1));
+        System.out.println(System.identityHashCode(c2));
     }
 }
