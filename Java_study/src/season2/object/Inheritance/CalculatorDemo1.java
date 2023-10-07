@@ -14,5 +14,37 @@ package season2.object.Inheritance;
  *   해당 객체를 사용하는 다른 곳에서도 해당 메소드를 알아야 하는 경우가 생긴다.
  *
  * */
+class Calculator {
+    int left, right;
+    public void setOpion(int _left, int _right) {
+        this.left = _left;
+        this.right = _right;
+    }
+    public void sum() {
+        System.out.println(this.left + this.right );
+    }
+    public void avg() {
+        System.out.println((this.left + this.right ) / 2);
+    }
+}
+
+class SubstructionableCalculator extends Calculator {
+    /**
+     * SubstructionableCalculator는 Calculator를 상속, 확장 한다.
+     * class diagram
+     * 현재 클래스에서 메소드가 없다면 상속된 클래스를 찾아 확인한다.
+     * */
+    public void substract() {
+        System.out.println(this.left - this.right);
+    }
+}
+
 public class CalculatorDemo1 {
+    public static void main(String[] args) {
+        SubstructionableCalculator c1 = new SubstructionableCalculator();
+        c1.setOpion(10, 20);
+        c1.sum();
+        c1.avg();
+        c1.substract();
+    }
 }
