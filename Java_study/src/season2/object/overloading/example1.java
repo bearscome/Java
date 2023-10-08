@@ -10,32 +10,55 @@ package season2.object.overloading;
  */
 
 class Calculaotr {
-    int left, right;
-    int thirth = 0;
+    int[] array;
+//    int left, right;
+//    int thirth = 0;
 
-    public void setOprands(int _left, int _right) {
-        this.left = _left;
-        this.right = _right;
-    }
+//    public void setOprands(int _left, int _right) {
+//        this.left = _left;
+//        this.right = _right;
+//    }
 
-    public void setOprands(int _left, int _right, int _thirth) {
+//    public void setOprands(int _left, int _right, int _thirth) {
 //        this.left = _left;
 //        this.right = _right;
 //        동일한 코드라면 자신의 메소드를 호출한다.
-        this.setOprands(_left, _right);
-        this.thirth = _thirth;
+//        this.setOprands(_left, _right);
+//        this.thirth = _thirth;
+//    }
+
+//    public void sum() {
+//        System.out.println(this.left + this.right + this.thirth);
+//    }
+
+    public void setOprands(int[] _array) {
+        this.array = _array;
     }
 
-    public void sum() {
-        System.out.println(this.left + this.right + this.thirth);
+    public int sum() {
+        int sum = 0;
+        for(int num: this.array) {
+            sum += num;
+        }
+
+        return sum;
+    }
+
+    public void printSum() {
+        System.out.println("sum: " + sum());
+    }
+
+    public void printAvg() {
+        int avg = sum() / this.array.length;
+
+        System.out.println("avg: " + avg);
     }
 }
 public class example1 {
     public static void main(String[] args) {
         Calculaotr c1 = new Calculaotr();
-        c1.setOprands(10, 20);
-        c1.sum();
-        c1.setOprands(10, 20, 30);
-        c1.sum();
+        c1.setOprands(new int[] {10, 20});
+        c1.printSum();
+        c1.printAvg();
     }
 }
