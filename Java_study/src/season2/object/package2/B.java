@@ -8,6 +8,6 @@ import season2.object.package1.A;
 
 public class B {
     public static void main(String[] args) {
-        A a = new A();
+
     }
 }
