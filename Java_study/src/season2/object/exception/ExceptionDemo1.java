@@ -11,10 +11,14 @@ class A {
     public void z(int _first, int _twice) {
         try {
             System.out.println(arr[_first] / arr[_twice]);
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException" + e);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException" + e);
         } catch (Exception e) {
-            System.out.println(e.getMessage() + "\n");
-            e.printStackTrace();
+            System.out.println("Exception" + e);
         }
+        // 여러개의 오류 타입에 따라 확인이 가능하다.
     }
 }
 
