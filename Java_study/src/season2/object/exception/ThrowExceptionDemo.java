@@ -19,20 +19,21 @@ class B {
 }
 
 class C {
-    void run() {
+    void run() throws FileNotFoundException,IOException {
         B b = new B();
-        try {
-            b.run();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        b.run();
     }
 }
 public class ThrowExceptionDemo {
     public static void main(String[] args) {
         C c = new C();
-        c.run();
+        try {
+            c.run();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
