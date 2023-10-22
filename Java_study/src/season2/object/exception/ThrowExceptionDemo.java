@@ -8,6 +8,9 @@ class B {
      * try, catch문을 사용할 수 있지만, C 클래스에 넘길 수도 있다.
      * B -> C -> ThrowExceptionDemo으로 넘길 수 있다.
      */
+        BufferedReader bReader = null;
+        String input = null;
+
         bReader = new BufferedReader(new FileReader("out.txt"));
         input = bReader.readLine();
 
