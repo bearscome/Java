@@ -17,6 +17,11 @@ class A {
             System.out.println("ArrayIndexOutOfBoundsException" + e);
         } catch (Exception e) {
             System.out.println("Exception" + e);
+        } finally {
+            System.out.println("finally");
+            // try, catch문 실행 된 후 실행됨
+            // 만약 데이터 베이스에 접근 시도하거나 접근이 안되어도
+            // 데이터베이스의 접속을 끊어야 하기 때문에 finally를 사용한다.
         }
         // 여러개의 오류 타입에 따라 확인이 가능하다.
     }
