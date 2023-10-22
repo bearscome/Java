@@ -8,9 +8,17 @@ class Calculaotr {
     }
 
     public void division() {
-        System.out.println("계산된 값은: ");
-        System.out.println(this.left / this.right);
-        System.out.println("입니다.");
+        try {
+            System.out.println("계산된 값은: ");
+            System.out.println(this.left / this.right);
+            System.out.println("입니다.");
+        } catch (Exception e) {
+            System.out.println("오류가 발생했습니다" + e.getMessage());
+            // 예외가 발생했을 때 실행되는 로직
+        }
+
+//        계산된 값은:
+//        오류가 발생했습니다/ by zero
     }
 }
 public class CalculatorDemo {
