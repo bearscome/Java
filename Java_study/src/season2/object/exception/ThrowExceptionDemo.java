@@ -30,7 +30,8 @@ public class ThrowExceptionDemo {
         try {
             c.run();
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("out.txt의 파일이 없습니다");
         }
     }
 }
