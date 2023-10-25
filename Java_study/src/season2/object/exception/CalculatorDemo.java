@@ -17,6 +17,14 @@ class Calculaotr {
         if(this.right < 1) {
             throw new ArithmeticException("0으로 나눌 수 없습니다.");
             // Exception이 발견되면 catch문을 실행하고 해당 함수를 빠져나온다.
+
+
+//            예외	사용해야 할 상황
+//            IllegalArgumentException	매개변수가 의도하지 않은 상황을 유발시킬 때
+//            IllegalStateException	메소드를 호출하기 위한 상태가 아닐 때
+//            NullPointerException	매개 변수 값이 null 일 때
+//            IndexOutOfBoundsException	인덱스 매개 변수 값이 범위를 벗어날 때
+//            ArithmeticException	산술적인 연산에 오류가 있을 때
         };
 
 
