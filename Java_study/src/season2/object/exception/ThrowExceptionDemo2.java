@@ -32,6 +32,12 @@ class E {
      *   2. try, catch, throws를 명시 안 해도 됌
      *     - 예외 처리 필요 없음
      * */
+
+    /**
+     * 커스텀 예외를 만들 때 checked, unChecked를 사용 할 것인지 잘 구분 해야함
+     * checkd: 오류 발생 시 개발자가 개선 할 수 있는 문제일 때
+     * unChecked: 오류 발생 시 개발자가 개선 할 수 없는 문제일 때 (어플리케이션 종료)
+     * */
 }
 
 public class ThrowExceptionDemo2 {
