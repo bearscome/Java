@@ -8,7 +8,7 @@ class Student {
     }
 
     public boolean equals(Object obj) {
-        // obj의타입이 Student가 아닐 경우는 Object로 변경하여 전달 받는다.
+        // obj의타입이 Student가 아닐 경우는 Object로 변경하여 전달 받는다..
 
         Student s = (Student) obj;
         return this.name == s.name;
