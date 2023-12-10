@@ -1,7 +1,8 @@
 package season2.object.exception;
 
 //class DivideException extends RuntimeException {
-class DivideException extends ArithmeticException {
+//class DivideException extends ArithmeticException {
+class DivideException extends Exception {
     DivideException() {
         super();
     }
@@ -19,9 +20,14 @@ class Calculaotr {
     }
 
     public void division() {
-        if(this.right < 1) {
-            throw new DivideException("0으로 나눌 수 없습니다.");
-        };
+        try {
+            if(this.right < 1) {
+                throw new DivideException("0으로 나눌 수 없습니다.");
+            };
+        } catch (DivideException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("DIVIDE END");
     }
 }
