@@ -1,36 +1,36 @@
 package season2.object.constans2;
 
-//interface FRUIT {
-//    int APPLE = 1, PEACH = 2, BANANA = 3;
-//}
-//
-//interface COMPANY {
-//    int GOOGLE = 1, APPLE = 2, ORACLE = 3;
-//}
+class Fruit {
+    public static final Fruit  APPLE = new Fruit(); // 자기 자신을 인스턴스
+    public static final Fruit  PEACH = new Fruit();
+    public static final Fruit  BANANA = new Fruit();
+
+}
+class Company {
+    public static final Company  GOOGLE = new Company();
+    public static final Company  APPLE = new Company();
+    public static final Company  ORACLE = new Company();
+}
 
 public class ConstantDemo {
-    public final static int PRUIT_APPLE = 1;
-    public final static int PRUIT_PEACH = 2;
-    public final static int PRUIT_BANANA = 3;
-    // private는 클래스 안에서만 사용
-    // final는 상수를 의미
-    // static은 클래스 변수
-    // int는 숫자
 
-    private final static int COMPANY_GOOGLE = 1;
-    private final static int COMPANY_APPLE = 2;
-    private final static int COMPANY_ORACLE = 3;
+//    if(Fruit.APPLE === Company.APPLE) {
+        // 의미가 혼동될 수 있는 것을 에러를 런타임으로 잡아서
+        // 오류를 컴파일러가 검출해줄 수 있다.
+//    }
+
 
     public static void main(String[] args) {
-        int type = PRUIT_APPLE;
+        Fruit type = Fruit.APPLE;
         switch (type) {
-            case PRUIT_APPLE:
+            // switch조건은 데이터 타입이 제한적이다 (int, char, byte, String, ...)
+            case Fruit.APPLE:
                 System.out.println("57");
                 break;
-            case PRUIT_PEACH:
+            case Fruit.PEACH:
                 System.out.println("34");
                 break;
-            case PRUIT_BANANA:
+            case Fruit.BANANA:
                 System.out.println("93");
                 break;
 
