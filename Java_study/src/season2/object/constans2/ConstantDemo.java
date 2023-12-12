@@ -7,7 +7,15 @@ package season2.object.constans2;
 //
 //}
 enum Fruit {
-    APPLE, PEACH, BANANA
+    APPLE("red"), PEACH("pink"), BANANA("yellow");
+    // 생성자를 호출할 때 매개변수를 넘겨 생성자는 인자를 받아 설정한다.
+    public String color;
+    Fruit(String color) {
+        // 상수를 하나를 만들 때마다 인스턴스의 생성자가 호출된다.
+        this.color = color;
+        System.out.println("Call constructor: " + this + ", " + this.color);
+
+    }
 }
 
 //class Company {
@@ -23,6 +31,7 @@ enum Company {
 // 코드가 단순해진다
 // 인스턴스 생성과 상속을 방지한다.
 // 키워드 enum을 사용하기 떄문에 구현의 의도가 열거임을 분명하게 나타낼 수 있다.
+// enum은 class 생성자 이다.
 
 public class ConstantDemo {
 
@@ -38,13 +47,13 @@ public class ConstantDemo {
             // switch조건은 데이터 타입이 제한적이다 (int, char, byte, String, ...)
             // switch의 type은 Fruit의 타입이다.
             case APPLE:
-                System.out.println("57");
+                System.out.println(57+"kcal, color " + Fruit.APPLE.color);
                 break;
             case PEACH:
-                System.out.println("34");
+                System.out.println(34+"kcal, color" + Fruit.PEACH.color);
                 break;
             case BANANA:
-                System.out.println("93");
+                System.out.println(93+"kcal, color " + Fruit.BANANA.color);
                 break;
 
         }
