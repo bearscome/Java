@@ -20,9 +20,8 @@ public class ReferenceDemo1 {
     public static void runReference() {
         A a = new A(1);
         A b = a;
-//        b.id = 2;
-        a.id = 2;
-        System.out.println("runReference, " + a.id);
+        b = new A(1);
+        System.out.println("runReference, A: " + a.id + " runReference, B: " + b.id);
         // 인스턴스를 참조할 수 있는 주소 값만 가지고 있기 떄문에
         // a , b의 id를 변경하면 해당 두 변수가 영향을 받는다. (메모리 주소?)
         // 자바스크립트 객체와 동일한 거 같다.
