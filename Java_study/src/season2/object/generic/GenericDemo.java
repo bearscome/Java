@@ -15,12 +15,22 @@ class Person<T, S>{
         this.info = info;
         this.id = id;
     };
+
+    public <U> void printInfo(U info) {
+        // 제네릭은 클래스 레벨에서만 사용하지 않아도 된다.
+        // 메소드 레벨에서도 사용이 가능하다.
+        System.out.println(info);
+    }
 }
 public class GenericDemo {
     public static void main(String[] args) {
 //        Integer id = new Integer(3); // new Integer는 Java 9부터 사용하지 않는 생성자이다.
+        EmployeeInfo e = new EmployeeInfo(1);
         Integer id = 1;
-        Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(new EmployeeInfo(1), id);
-        System.out.println(p1.id.intValue());
+        Person p1 = new Person(e, id);
+        // 변수에 선언된 데이터 타입이 있으면 제네릭 타입 생략 가능
+
+//        p1.<EmployeeInfo>printInfo(e); -> 타입 생략이 가능하다
+        p1.printInfo(e);
     }
 }
