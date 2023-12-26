@@ -46,5 +46,7 @@ public class setDemo {
 //        A.removeAll(B);
         // A와 B의 교집합을 제거한다 (차집합)
 //        System.out.println(A);
+
+        //https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/516/2164.gif
     }
 }
