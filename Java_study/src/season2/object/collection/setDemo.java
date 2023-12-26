@@ -11,11 +11,6 @@ public class setDemo {
         // Javascript의 set이랑 동일하네..
 //        ArrayList<Integer> B = new ArrayList<Integer>();
 
-        //        Iterator hi = (Iterator) A.iterator();
-//        while (hi.hasNext()) {
-//            System.out.println(hi.next());
-//        }
-
         A.add(1);
         A.add(2);
         A.add(3);
@@ -48,5 +43,16 @@ public class setDemo {
 //        System.out.println(A);
 
         //https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/516/2164.gif
+
+
+        Iterator hi = (Iterator) A.iterator();
+        // A의 값을 Interator의 type으로 변경 후
+        // A를 복제하여 hi에 대입한다
+        while (hi.hasNext()) {
+            // hasNext() hi 안에 해당 값이 있는지 확인 [true, false]
+            System.out.println(hi.next());
+            // next() 메소드 호출 시 랜덤으로 해당 값을 리턴 받은 뒤
+            // 리턴 받은 값을 hi에서 삭제한다.
+        }
     }
 }
