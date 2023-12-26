@@ -29,7 +29,7 @@ public class ArrayListDemo {
             System.out.println(al.get(i));
             // get(index)의 값으로 호출해야한다.
 
-            String value1 = al.get(i);
+//            String value1 = al.get(i); // ArrayList는 Object타입을 받기 때문에 오류
             String value2 = (String) al.get(i);
             Object value3 = al.get(i);
             // ArrayList의 add라는 methode는 어떤 타입이라도 수용이 가능하기 때문에 Object타입이 선언된다.
