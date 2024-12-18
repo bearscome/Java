@@ -32,7 +32,7 @@ public class Var8 {
         * 실수 - double: 실수는 고민하지 말고 double 사용
         * 블린형 - boolean: true, false
         * 문자열 - String: 문자를 다룰 때는 문자 하나든 문자열 이든 모두 String을 사용하는것이 편리하다
-        * */
+        * */?
 
 
     }
