@@ -5,7 +5,7 @@ public class MethodValue1 {
         int num1 = 5;
         System.out.println("1. changeNumber 호출 전, num1: " + num1);
         changeValue(num1);
-        System.out.println("4. changeNumber 호출 전, num1: " + num1); // 리턴된게 없으니까..
+        System.out.println("4. changeNumber 호출 후, num1: " + num1); // 리턴된게 없으니까..
         // 변수에 값을 복사해서 대입한다.
         // 자바는 항상 변수의 값을 복사해서 대입한다.
     }
