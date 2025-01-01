@@ -18,6 +18,6 @@ public class CastingEx {
         SmartPhone sp2 = (SmartPhone) p; // 형 변환을 통해서 타입 변경 가능
 
         sp2.installApp();
-        p2.installApp();
+//        p2.installApp();
     }
 }
