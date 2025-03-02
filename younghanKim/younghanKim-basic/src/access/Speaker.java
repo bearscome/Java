@@ -3,7 +3,7 @@ package access;
 public class Speaker {
     private int volume;
 
-    Speaker(int volume) {
+     Speaker(int volume) {
         this.volume = volume;
     };
 
