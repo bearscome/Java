@@ -12,7 +12,7 @@ public class SpeakerMain {
         speaker.showVolume();
 
         // 필드에 직접 접근
-        speaker.volume = 200;
+//        speaker.volume = 200;
         speaker.showVolume();
     }
 }
