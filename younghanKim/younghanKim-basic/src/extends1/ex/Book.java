@@ -7,8 +7,12 @@ public class Book extends Item {
     public Book(String name, int price, String author, String isbn) {
         super(name, price);
 
-        System.out.println("- 저자: " + author + " isBn: " + isbn);
         this.author = author;
         this.isbn = isbn;
+    }
+
+    public void print() {
+        itemPrint();
+        System.out.println("- 저자: " + author + " isBn: " + isbn);
     }
 }

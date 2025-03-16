@@ -7,9 +7,12 @@ public class Movie extends Item {
     public Movie(String name, int price, String director, String actor) {
         super(name, price);
 
-        System.out.println("- director: " + director + " actor: " + actor);
-
         this.director = director;
         this.actor = actor;
+    }
+
+    public void print() {
+        itemPrint();
+        System.out.println("- director: " + director + " actor: " + actor);
     }
 }
