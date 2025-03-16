@@ -1,8 +1,8 @@
 package extends1.ex;
 
 public class Book extends Item {
-    public String author;
-    public String isbn;
+    private String author;
+    private String isbn;
 
     public Book(String name, int price, String author, String isbn) {
         super(name, price);
@@ -11,8 +11,9 @@ public class Book extends Item {
         this.isbn = isbn;
     }
 
+    @Override
     public void print() {
-        itemPrint();
+        super.print();
         System.out.println("- 저자: " + author + " isBn: " + isbn);
     }
 }

@@ -1,7 +1,7 @@
 package extends1.ex;
 
 public class Album extends Item {
-    public String artist;
+    private String artist;
 
     public Album(String name, int price, String artist) {
         super(name, price);
@@ -9,7 +9,7 @@ public class Album extends Item {
     }
 
     public void print() {
-        itemPrint();
+        super.print();
         System.out.println("- artist: " + artist);
     }
 }
